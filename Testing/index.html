@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Import CSS-->
+    <link rel="stylesheet" href="/Components-testing/Testing/CSS/main.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="container fl-column gap-40 fl-j-center">
+        <!-- Buttons -->
+        <div id="1" class="buttons gap-24">
+            <button type="button" class="primary">Follow</button>
+            <button>Cancel</button>
+            <button disabled="true">Cancel</button>
+        </div>
+
+        <!-- Statitics -->
+        <div class="statistics">
+            <div class="stats">
+                <span class="stat-item">
+                    <p class="number">12</p>
+                    <p class="desc">posts</p>
+                </span>
+                <span class="divider"></span>
+            
+                <span class="stat-item">
+                    <p class="number">+13%</p>
+                    <p class="desc">views</p>
+                </span>
+                <span class="divider"></span>
+            
+                <span class="stat-item">
+                    <p class="number">23</p>
+                    <p class="desc">fans</p>
+                </span>
+            </div>
+
+            <span class="badge">this week</span>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <span class="tab-item first active">Tab item</span>
+            <span class="tab-item">Tab item</span>
+            <span class="tab-item last">Tab item</span>
+        </div>
+
+        <!-- Carousel -->
+        <div class="collection">
+            <div class="carousel">
+                <ul class="images">
+                    <li id="carousel-item-1" class="item" style="background-image: url(/IMG/Avatars/1.jpg);"></li>
+                    <li id="carousel-item-2" class="item" style="background-image: url(/IMG/Avatars/2.jpg);"></li>
+                    <li id="carousel-item-3" class="item" style="background-image: url(/IMG/Avatars/5.jpg);"></li>
+                </ul>
+
+                <div class="indicators">
+                    <a class="dot active" href="#carousel-item-1"></a>
+                    <a class="dot" href="#carousel-item-2"></a>
+                    <a class="dot" href="#carousel-item-3"></a>
+                </div>
+            </div>
+
+            <div class="carousel-info">
+                <div class="left">
+                    <p class="category">Collection</p>
+                    <p class="name">Glass Waves</p>
+                    <p class="desc">A new kind of gradients</p>
+                </div>
+
+                <div class="right">2 days</div>
+            </div>
+
+            <div class="carousel-actions">
+                <div class="left">
+                    <ul class="avatars">
+                        <li class="item" style="background-image: url(/IMG/Avatars/1.jpg); z-index: 0;"></li>
+                        <li class="item" style="background-image: url(/IMG/Avatars/2.jpg); z-index: 1;"></li>
+                        <li class="item" style="background-image: url(/IMG/Avatars/3.jpg); z-index: 2;"></li>
+                    </ul>
+
+                    <div class="text">146 likes</div>
+                </div>
+
+                <div class="right">
+                    <button class="primary pdtb-8 pdlr-16 radius-40">Save</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search box -->
+        <div class="search-box">
+            <input type="text" placeholder="Search...">
+            
+            <div class="action">
+                <img src="/IMG/Icons/search.svg" alt="">
+            </div>
+        </div>
+
+        <!-- Dropdown -->
+        <div class="dropdowns">
+
+            <div class="dropdown">
+                <input type="text" name="" id="dropdown1" readonly placeholder="Dropdown">
+                
+                <div class="action">
+                    <img src="/IMG/Icons/expand_more.svg" alt="">
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="options">
+                <ul class="option-list">
+                    <li class="item active">Item 1</li>
+                    <li class="item">Item 2</li>
+                    <li class="item">Item 3</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="box">
+
+        </div>
+    </div>
+</body>
+</html>
