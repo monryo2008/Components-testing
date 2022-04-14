@@ -1,0 +1,681 @@
+.container {
+    //Border
+    // border: 1px dashed red;
+    
+    //Layout
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 32px;
+
+    padding-top: 120px;
+    // width: 320px;
+}
+
+// ====== BUTTONS ====== //
+
+.buttons {
+    //Layout
+    display: flex;
+    justify-content: center;
+
+    //Size
+    width: 100%;
+
+}
+
+button {
+    //Background
+    background-color: $blue3;
+
+    //Border
+    border-radius: 8px;
+    border: 2px solid $blue2;
+
+    //Font
+    color: $white;
+    font-size: 20px;
+    font-weight: 500;
+
+    //Size
+    padding: 16px 40px;
+
+    //Transition
+    transition: 200ms ease-in-out;
+
+    cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+    transform: translateY(-8px);
+}
+
+
+button:disabled {
+    //Background
+    background-color: $gray3;
+    
+    //Border
+    border: 2px solid $gray2;
+    
+    //Color
+    color: $gray1;
+
+    cursor: default;
+}
+
+.primary {
+    //Background
+    background-color: $blue1;
+    
+    //Border
+    border: none;
+
+    //Font
+    color: $white;
+    font-weight: 20px;
+}
+
+// ====== STATISTICS ====== //
+.statistics {
+    //Background
+    // background-color: white;
+
+    //Layout
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    //Position
+    position: relative;
+
+    user-select: none;
+    transition: 200ms ease-in-out;
+
+    .stats {
+        //Background
+        background-color: $blue4;
+        
+        //Border
+        border: 1px solid $gray2;
+        border-radius: 16px;
+
+        //Layout
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+
+        //Size
+        padding: 0 24px;
+
+        .stat-item {
+            //Layout
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            // flex-grow: 1;
+            gap: 12px;
+            justify-content: space-evenly;
+
+            //Size
+            padding: 24px 16px;
+
+            .number {
+                //Font
+                color: $white;
+                font-size: 24px;
+                font-weight: 500;
+            }
+
+            .desc {
+                //Font
+                font-size: 12px;
+                font-weight: 400;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+        }
+
+        .divider {
+            //Background
+            background-color: $gray1;
+            
+            //Size
+            width: 1px;
+            height: 40px;
+        }
+    }
+
+    .badge {
+        //Background
+        background-color: $blue1;
+
+        //Border
+        border-radius: 24px;
+
+        //Font
+        color: $white;
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+
+        //Postion
+        position: absolute;
+        right: 16px;
+        bottom: -12px;
+
+        //Size
+        padding: 8px 12px;
+    }
+}
+
+// ====== TABS ====== //
+.tabs {
+    //Layout
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    //Size
+    // width: 100%;
+
+    .tab-item {
+        //Border
+        border: 1px solid $gray2;
+        
+        //Background
+        background-color: $gray3;
+
+        //Color
+        color: $gray1;
+
+        //Font
+        font-weight: 500;
+
+        //Layout
+        flex-grow: 1;
+        
+        //Size
+        padding: 16px 24px;
+
+        cursor: pointer;
+        transition: 100ms ease-in-out;
+        user-select: none;
+    }
+
+    .tab-item ~ .tab-item {
+        border-left: none;
+    }
+
+    .tab-item:hover {
+        //Border
+        border: 1px solid $blue2;
+
+        //Background
+        background-color: $blue3;
+
+        //Font
+        color: $white;
+    }
+
+    .tab-item ~ .tab-item:hover {
+        //Border
+        border-left: none;
+    }
+
+    .first { 
+        //Border
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+
+    .last {
+        //Border
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+}
+
+// ====== COLLECTIION ====== //
+.collection {
+    //Border
+    border: 1px solid $gray2;
+    border-radius: 16px;
+
+    //Background
+    background-color: $gray3;
+    
+    //Layout
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 24px;
+
+    .carousel {
+        //Layout
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+
+
+        .images {
+            //Border
+            border-radius: 16px;
+    
+            //Layout
+            display: flex;
+            justify-content: flex-start;
+            overflow: hidden;
+
+            //Size
+            height: calc(288px*2/3);
+            width: 288px;
+
+            // transition: 200ms ease-in-out;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+
+            .item {
+                 //Background
+                background-color: $black;
+                background-size: 100% auto;
+                background-position: center center;
+                background-repeat: no-repeat;
+
+                //Size
+                // height: 100%;
+                width: 288px;
+
+                flex-shrink: 0;
+
+                // transition: 200ms ease-in-out;
+
+                // animation: slide 1s 2 3s;
+                // animation-fill-mode: forwards;
+
+                scroll-snap-align: start;
+            }
+
+            @keyframes slide {
+                0% {
+                    transform: translateX(0);
+                    animation-timing-function: ease-out;
+                }
+
+                100% {
+                    transform: translateX(-288px);
+                } 
+            }
+        }
+
+        .indicators {
+            //Layout
+            display: flex;
+            gap: 12px;
+
+            .dot {
+                //Background
+                background-color: $gray2;
+
+                //Border
+                border-radius: 50%;
+
+                //Size
+                height: 8px;
+                width: 8px;
+
+                cursor: pointer;
+                transition: 200ms ease-in-out;
+
+                &.active {
+                    //Background
+                    background-color: $white;
+
+                    cursor: default;
+                }
+
+                &:hover:not(.active){
+                    //Background
+                    background-color: $white;
+                    opacity: 50%;
+                }
+            }
+        }
+    }
+
+    .carousel-info {
+        //Layout
+        display: flex;
+        justify-content: space-between;
+
+        //Size
+        width: 100%;
+
+        .left {
+            //Layout
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            gap: 8px;
+
+            .category {
+                //Font
+                color: $blue0;
+                font-size: 12px;
+            }
+
+            .name {
+                //Font
+                color: $white;
+                font-size: 20px;
+                text-transform: capitalize;
+            }
+
+            .desc {
+                //Font
+                font-size: 14px;
+            }
+        }
+
+        .right {
+            //Font
+            color: $gray1;
+            text-align: end;
+
+            //Layout
+            flex-grow: 1;
+        }
+    }
+
+    .carousel-actions {
+        //Layout
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        //Size
+        width: 100%;
+
+        .left {
+            //Layout
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 8px;
+            flex-grow: 1;
+
+            .avatars {
+                //Layout
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                .item {
+                    //Background
+                    background-repeat: no-repeat;
+                    background-size: cover;
+
+                    // opacity: .5;
+
+                    //Border
+                    border-radius: 50%;
+
+                    //Size
+                    height: 24px;
+                    width: 24px;
+
+                    transition: transform 200ms ease-in-out;
+
+                    & ~ .item{
+                        //Layout
+                        margin-left: -8px;
+                    }
+                }
+
+                .item:hover {
+                    transform: translateY(-3px);
+                    // z-index: initial;
+                    position: relative;
+                }
+            }
+
+            .text {
+                //Font
+                font-size: 14px;
+            }
+        }
+
+        .right {
+            //Layout
+            flex-grow: 1;
+            display: flex;
+            justify-content: flex-end;
+
+            button {
+                //Font
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+// ====== SEARCH BOX ====== //
+.search-box {
+    //Layout
+    display: flex;
+    position: relative;
+    align-items: center;
+
+    //Size
+    width: 338px;
+
+    .action {
+        //Background
+        background-color: $blue1;
+
+        //Border
+        border:none;
+        border-radius: 8px;
+
+        //Layout
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 8px;
+
+        //Size
+        width: 40px;
+        height: 40px;
+    }
+
+    input {
+        //Background 
+        background-color: $blue4;
+
+        //Border
+        border: 1px solid $gray2;
+        border-radius: 16px;
+
+        //Font
+        color: $white;
+        font-size: 18px;
+
+        //Layout
+        flex-grow: 1;
+
+        //Size
+        height: 56px;
+        padding: 0 16px;
+    }
+
+    input:focus {
+        //Border
+        border: 2px solid $gray1;
+        outline: none;
+    }
+
+    input::placeholder {
+        color: $gray1;
+    }
+}
+
+// ====== DROPDOWN ====== //
+.dropdowns {
+    //Background 
+    background-color: $blue4;
+
+    //Border
+    border: 1px solid $gray2;
+    border-radius: 16px;
+
+    //Layout
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    //Size
+    width: 338px;
+
+    .dropdown {
+        //Layout
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        flex-grow: 1;
+
+        .action {
+            //Layout
+            position: absolute;
+            right: 16px;
+
+            img {
+                //Size
+                width: 32px;
+            }
+        }
+
+        input {
+            //Background 
+            background-color: $blue4;
+
+            //Border
+            border: none;
+
+            //Font
+            color: $white;
+            font-size: 18px;
+
+            //Layout
+            flex-grow: 1;
+
+            //Size
+            height: 56px;
+            padding: 0 16px;
+        }
+
+        input:focus {
+            //Border
+            outline: none;
+
+            cursor: default;
+        }
+
+        input::placeholder {
+            color: $white;
+        }
+    }
+
+    .divider {
+        //Background 
+        background-color: $blue4;
+
+        //Border
+        border-top: 1px dashed $gray1;
+        
+        //Layout
+        flex-grow: 1;
+
+        //Size
+        height: 1px;
+        margin: 0 16px;
+    }
+
+    .options {
+        //Size
+        padding: 16px;
+        
+        .option-list {
+            //Layout
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            
+            .item {
+                //Border
+                border-radius: 8px;
+
+                //Size
+                padding: 16px 16px 16px 0;
+
+                transition: 200ms ease-in-out;
+            }
+
+            .item:hover, .item.active {
+                //Background
+                background-color: $blue1;
+
+                //Font
+                color: $white;
+
+                //Size
+                padding: 16px;
+
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+// ====== GRADIENT BOX ====== //
+.box {
+    //Background
+    background-clip: padding-box;
+    background-color: $gray3;
+
+    //Border
+    border: 12px solid transparent;
+    border-radius: 24px;
+
+    //Layout
+    position: relative;
+    
+    //Size
+    height: 200px;
+    width: 200px;
+}
+
+.box::before {
+    //Background
+    background-image: linear-gradient(to bottom right, $blue0, rgba($blue0,.1));
+
+    //Border
+    border-radius: 16px;
+
+    //Layout
+    position: absolute;
+    inset: 0;
+    
+    //Size
+    margin: -2px;
+    
+    z-index: -1;
+    content: "";
+}

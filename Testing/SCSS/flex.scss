@@ -1,0 +1,45 @@
+.fl-column { flex-direction: column; }
+
+// ===== ROW GAP ===== //
+.r-gap-4  { row-gap: 4px;  }
+.r-gap-8  { row-gap: 8px;  }
+.r-gap-12 { row-gap: 12px; }
+.r-gap-16 { row-gap: 16px; }
+.r-gap-20 { row-gap: 20px; }
+.r-gap-24 { row-gap: 24px; }
+.r-gap-32 { row-gap: 32px; }
+.r-gap-40 { row-gap: 40px; }
+
+// ===== COLUMN GAP ===== //
+.c-gap-4  { column-gap: 4px;  }
+.c-gap-8  { column-gap: 8px;  }
+.c-gap-12 { column-gap: 12px; }
+.c-gap-16 { column-gap: 16px; }
+.c-gap-20 { column-gap: 20px; }
+.c-gap-24 { column-gap: 24px; }
+.c-gap-32 { column-gap: 32px; }
+.c-gap-40 { column-gap: 40px; }
+
+// ===== COLUMN & ROW GAP ===== //
+.gap-4  { gap: 4px;  }
+.gap-8  { gap: 8px;  }
+.gap-12 { gap: 12px; }
+.gap-16 { gap: 16px; }
+.gap-20 { gap: 20px; }
+.gap-24 { gap: 24px; }
+.gap-32 { gap: 32px; }
+.gap-40 { gap: 40px; }
+
+// ===== JUSTIFY ===== //
+.fl-j-center { justify-content: center;     }
+.fl-j-start  { justify-content: flex-start; }
+.fl-j-end    { justify-content: flex-end;   }
+
+// ===== ALIGN ===== //
+.fl-ai-center { align-items: center;     }
+.fl-ai-start  { align-items: flex-start; }
+.fl-ai-end    { align-items: flex-end;   }
+
+.fl-ac-center { align-content: center;     }
+.fl-ac-start  { align-content: flex-start; }
+.fl-ac-end    { align-content: flex-end;   }
